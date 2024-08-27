@@ -7,7 +7,7 @@ const router = require('./src/routes/routes')
 const app = express();
 
 app.use(cors({
-    origin: process.env.CORS_ORIGIN,
+    origin: [process.env.CORS_ORIGIN_HOME, CORS_ORIGIN_HOME_2, process.env.CORS_ORIGIN_LOGIN, CORS_ORIGIN_REGISTER],
     credentials: true
 }))
 app.use(express.json())
